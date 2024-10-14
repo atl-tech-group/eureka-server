@@ -1,0 +1,14 @@
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  server:
+    enable-self-preservation: true # Shebeke fasileleri zamani serverlerin derhal cixarilmasi qarsini alir
+    eviction-interval-timer-in-ms: 60000  # Serverin registerden cixarilmasi ucun gozleme intervali(default deyeri - 60 san)
+  instance:
+    prefer-ip-address: true  #Diger serverler IP-addressine gore register olunsun
+
+server:
+  port: 8761
